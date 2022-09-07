@@ -33,6 +33,6 @@
 
     const [miss, leBool, num] = avengersArr;
 
-    console.log({ leBool });
+    // console.log({ leBool });
 
 })()
