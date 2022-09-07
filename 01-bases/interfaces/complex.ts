@@ -3,7 +3,8 @@
     interface Customer {
         name: string,
         age?: number,
-        address: Adress
+        address: Adress,
+        getFullAdress(id: string): void
     }
 
     interface Adress {
@@ -20,7 +21,10 @@
             id: 123,
             zipcode: '680081',
             city: 'anyName'
-        }
+        },
+        getFullAdress(id: string) {
+            return this.address.city
+        },
     };
 
     const constumer2: Customer = {
@@ -31,7 +35,10 @@
             id: 222,
             zipcode: 'asd 123',
             city: 'tokio'
-        }
+        },
+        getFullAdress(id: string) {
+            return this.address.city
+        },
 
     }
 
