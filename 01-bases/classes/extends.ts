@@ -7,7 +7,7 @@
                 public name: string,
                 public realName: string,
             ) {
-            console.log('Constructor avenger called')
+            // console.log('Constructor avenger called')
         }
 
         //This protected method is accesible for extends
@@ -24,18 +24,31 @@
             public isMutant: boolean
         ) {
             super(name, realName)
-            console.log('xmen constructor called')
+            // console.log('xmen constructor called')
 
         }
 
+        get fullName() {
+
+            return `${this.name} - ${this.realName}`
+        }
+
+        set fullName(name: string,) {
+            if (name.length < 3) throw new Error('too short')
+            this.name = name
+        }
+
         getFullNameFromXmen() {
-            super.getFullName()
+            // console.log(super.getFullName())
         }
 
     }
 
     const wolverine = new Xmen('Wolverine', 'Logan', true)
-    console.log(wolverine)
-    wolverine.getFullNameFromXmen()
+    // console.log(wolverine.fullName)
+    // wolverine.fullName = 'Fl'
+    // console.log(wolverine.fullName)
+
+    // wolverine.getFullNameFromXmen()
 
 })()
