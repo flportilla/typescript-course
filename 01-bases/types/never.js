@@ -1,7 +1,5 @@
 "use strict";
 (() => {
-    //never means that after the execution of this function
-    //the code ends, it finish the execution
     const error = (message) => {
         throw new Error(message);
     };
@@ -14,3 +12,4 @@
     };
     example('Help');
 })();
+//# sourceMappingURL=never.js.map
